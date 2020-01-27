@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">  
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Technical test ToDo</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">    
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/c1abb17d55.js"></script>
 </head>
-<body>
-    <h1>listo</h1>
+<body >    
+    
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-info  text-white" id="sidebar-wrapper">
+          <div class="sidebar-heading">
+            <div class="d-flex justify-content-center py-5">
+                <i class="fas fa-user-circle text-white fa-4x "></i>                                                                            
+            </div>
+            <h4>Name </h4>  
+            </div>
+          <div class="list-group list-group-flush">
+            <button class="active-droptown1 list-group-item  bg-info  text-white">Tasks
+				<i class="fa fa-caret-down"></i>
+			  </button>	
+			      <div class="submenu " style="display: none;">
+                <a href="#">Create Task</a>
+                <a href="#">Edit Task</a>
+                <a href="#">Search task </a>
+                <a href="#">Assign task</a>
+                <a href="#">Edit task status</a>                
+              </div>
+              
+              <button class="active-droptown1 list-group-item  bg-info  text-white">User
+				<i class="fa fa-caret-down"></i>
+			  </button>	
+			      <div class="submenu" style="display: none;">
+				        <a href="#">List users</a>				            
+			      </div>
+            
+            
+            
+          </div>
+        </div>
+        <!-- #sidebar-wrapper -->
+    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">         
+              <div class="section-task mt-2">
+                  <h4 class=" text-white bg-info" id="task-title">Task Activity</h2>
+                  <div class="d-flex">
+
+                    <div id="div-open"><!-- task division -->
+                        <h5 class="text-white bg-primary" id="open">Open</h5>
+                        
+                    </div>
+                    <div id="div-Progress"><!-- task division -->
+                        <h5 class=" text-white bg-warning" id="in-progress">In-Progress</h5>
+                    </div>
+                    <div id="div-completed"><!-- task division -->
+                        <h5 class=" text-white bg-success" id="completed">Completed</h5>
+                    </div>
+                    <div id="div-Archived"><!-- task division -->
+                        <h5 class=" text-white bg-dark" id="archived">Archived</h5>
+                    </div>             
+
+                  </div>
+              </div>         
+        </div>
+       
+    
+      </div>
+
+        <footer class="text-white bg-info position-absolute " id="footer">
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">Copyright© Ing. Juan José Sarabia Caffroni
+          </div>
+        </footer>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>    
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/controller.js"></script>    
 </body>
 </html>

@@ -8,6 +8,128 @@
 }
 
 #footer {
-	width: 100%;	
+    width: 100%;
+    line-height: 10px;	
 	bottom: 0;
 }
+
+
+
+
+
+
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }  
+
+  .section-task{
+    border: 0.5px solid #5bc0de;
+    width: 98%;
+    border-radius: 14px 14px 0px 0px;
+  }
+
+  #task-title, #open, #archived, #in-progress,#completed{    
+        text-align: center;
+        border-radius: 12px 12px 0px 0px;
+        font-size: 15px;
+        font-weight: bold;        
+        width: 100%;            
+  }
+
+  #div-open{
+    border: 0.5px solid #0275d8;
+    width: 25%;
+    border-radius: 14px 14px 0px 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  #div-Progress{
+    border: 0.5px solid #f0ad4e;
+    width: 25%;
+    border-radius: 14px 14px 0px 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  #div-completed{
+    border: 0.5px solid #5cb85c;
+    width: 25%;
+    border-radius: 14px 14px 0px 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  #div-Archived{
+    border: 0.5px solid #292b2c;
+    width: 25%;
+    border-radius: 14px 14px 0px 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .active-droptown1{
+  transition: 300ms all;
+  }
+  .submenu {
+    background:#166f7d52;
+  }
+ 
+
+  .submenu a{     
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+      height: 40px;
+      transition: 300ms all;
+  }
+
+  .submenu a:hover{
+    background-color: #15636e63;
+  }
+  .card-body{
+    padding: 0.25rem;
+  }
+
+  .card-body p{
+    font-size: 12px;
+  }
+ 

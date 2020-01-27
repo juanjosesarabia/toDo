@@ -12,7 +12,7 @@ $password = $_POST['password'];
 
 
 $info = array();
-$envio = array();
+
 $results = array();
 
 
@@ -34,14 +34,14 @@ if (!($row = mysqli_fetch_array($result, MYSQLI_ASSOC))) {
       mysqli_data_seek($result, 0);
       $row = mysqli_fetch_row($result);
       $_SESSION["name"]= $row[0];
-
+        
 
           //Free memory
     mysqli_free_result($result);
 
 }
 mysqli_close($conn);
-$results["data"] = $envio;
+
 
 /* convert to json */
 $resultsJson = json_encode($results);
