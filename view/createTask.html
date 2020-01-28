@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/c1abb17d55.js"></script>
 </head>
-<body onload="toList()">    
+<body >    
     
     <div class="d-flex" id="wrapper">
 
@@ -50,22 +50,43 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">         
               <div class="section-task mt-2">
-                  <h4 class=" text-white bg-info" id="task-title">Task Activity</h2>
-                  <div class="d-flex">
+                  <h4 class=" text-white bg-info" id="task-title">Create Task</h2>
+                                        
+                  <div class=" pt-3"><!-- create task -->
+                   <form id="createTask" class="form-group px-5">
+                    <div class="form-group  row">
+                      <label for="createNameT" class="col-3 col-form-label">Name task:</label>
+                      <div class="col-9">
+                      <input type="text" class="form-control"  placeholder="Name task" id="createNameT" required autofocus>
+                      </div>
+                    </div>
 
-                    <div id="div-open"><!-- task division -->
-                        <h5 class="text-white bg-primary" id="open">Open</h5>
-                        
+                    <div class="form-group row">
+                      <label for="createSelectState" class="col-3 col-form-label">Select State:</label>
+                      <div class="col-9">
+                      <select class="form-control" id="createSelectState" required>
+                        <option value="Open">Open</option>
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                     </div>
                     </div>
-                    <div id="div-Progress"><!-- task division -->
-                        <h5 class=" text-white bg-warning" id="in-progress">In-Progress</h5>
+                    <div class="form-group row">
+                      <label for="createResponsible" class="col-3 col-form-label">Name responsible:</label>
+                      <div class="col-9">
+                        <input type="text" class="form-control"  placeholder="Responsible" id="createResponsible" required >
+                        </div>
                     </div>
-                    <div id="div-completed"><!-- task division -->
-                        <h5 class=" text-white bg-success" id="completed">Completed</h5>
+
+                    <div class="d-flex justify-content-end">
+                      <input type="submit" class="btn text-white bg-info btn-md " value="Save task"> </input>
+                      
                     </div>
-                    <div id="div-Archived"><!-- task division -->
-                        <h5 class=" text-white bg-dark" id="archived">Archived</h5>
-                    </div>             
+
+
+                   </form>
+                   
 
                   </div>
               </div>         

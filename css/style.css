@@ -112,7 +112,7 @@
   }
  
 
-  .submenu a{     
+  .submenu a, #btn-logOut{     
       text-decoration: none;
       color: white;
       display: flex;
@@ -122,6 +122,9 @@
       transition: 300ms all;
   }
 
+  #btn-logOut{
+    text-align: center;
+  }
   .submenu a:hover{
     background-color: #15636e63;
   }

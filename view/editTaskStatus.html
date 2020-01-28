@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical test ToDo</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">    
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/c1abb17d55.js"></script>
+</head>
+<body >    
+    
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-info  text-white" id="sidebar-wrapper">
+          <div class="sidebar-heading">
+            <div class="d-flex justify-content-center py-5">
+                <i class="fas fa-user-circle text-white fa-4x "></i>                                                                            
+            </div>
+            <h4>Name </h4>  
+            </div>
+          <div class="list-group list-group-flush">
+            <button class="active-droptown1 list-group-item  bg-info  text-white">Tasks
+				<i class="fa fa-caret-down"></i>
+			  </button>	
+            <div class="submenu " style="display: none;">
+                <a href="home.html">Home</a>
+                <a href="createTask.html">Create Task</a>
+                <a href="editTask.html">Edit Task</a>
+                <a href="searchTask.html">Search task </a>
+                <a href="assignTask.html">Assign task</a>
+                <a href="editTaskStatus.html">Edit task status</a>                
+              </div>
+              
+              <button class="active-droptown1 list-group-item  bg-info  text-white">User
+				<i class="fa fa-caret-down"></i>
+			  </button>	
+			      <div class="submenu" style="display: none;">
+				        <a href="listUser.html">List users</a>				            
+			      </div>
+            <a href="../index.html" class=" list-group-item  bg-info  text-white" id="btn-logOut" >Log out</a>
+            
+            
+          </div>
+        </div>
+        <!-- #sidebar-wrapper -->
+    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">         
+              <div class="section-task mt-2">
+                  <h4 class=" text-white bg-info" id="task-title">Edit task status</h2>
+                                        
+                  <div class=" pt-3"><!-- Edit task status -->
+                     <form class="form-group px-5" id="searchT"><!-- form search Task -->
+                       <div class="form-group row">
+                         <div class="col-2">
+                          <label for="" class="col-form-label">Search: </label>
+                         </div>
+                         <div class="col-7">
+                          <input class="form-control" type="text"  list="searchTask" placeholder="Select task to assign responsible">
+                          <datalist id="searchTask" class="">
+      
+                          </datalist>
+
+                         </div>
+                         <div class="col-3">
+                          <a type="btn" class="btn btn-info btn-d btn-block text-white" onclick="">Select Taks</a>
+                         </div>
+                        </form>
+                       </div><br>
+                      
+              <div id="page-content-wrapper ">         
+                <div class="section-task mt-2 mx-2">
+                  <h4 class=" text-white bg-info" id="task-title">Data Task</h2>
+                      <br>
+                   <form id="editTaskStatus" class="form-group px-5"> <!-- form assignTask -->
+                    <div class="form-group  row">
+                      <label for="editTaskNameT" class="col-3 col-form-label">Name task:</label>
+                      <div class="col-9">
+                      <p  class="form-control"  placeholder="Name task" id="editTaskNameT" >Data Name task </p>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="editTaskResponsible" class="col-3 col-form-label">Name responsible:</label>
+                      <div class="col-9">
+                        <p  class="form-control"  placeholder="Responsible" id="editTaskResponsible" >Data Responsible</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="editTaskSelectState" class="col-3 col-form-label">Select State:</label>
+                      <div class="col-9">
+                        <select class="form-control" id="editTaskSelectState" required disabled>
+                          <option value="Open">Open</option>
+                          <option value="In-Progress">In-Progress</option>
+                          <option value="Completed">Completed</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        
+                     </div>
+                    </div>
+                    
+
+                    <div class="d-flex justify-content-end">
+                      <input type="submit" class="btn text-white bg-info btn-md " value="Assign Status" disabled> </input>
+                      
+                    </div>
+
+
+                   </form>
+                   
+                    </div>
+                  </div>     
+                </div>
+            </div>         
+        </div>
+       
+    
+      </div>
+
+        <footer class="text-white bg-info position-absolute " id="footer">
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">Copyright© Ing. Juan José Sarabia Caffroni
+          </div>
+        </footer>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>    
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/controller.js"></script>    
+</body>
+</html>

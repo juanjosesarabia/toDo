@@ -1,4 +1,4 @@
-localStorage["host"] = "http://192.168.0.108/TechnicalTestToDo/"
+localStorage["host"] = "http://192.168.0.3/TechnicalTestToDo/"
 
 
 $('#login').submit(function () {// 
@@ -112,6 +112,6 @@ function toList() {
     }, 2000);
  
 }
-toList();
+
 
 
