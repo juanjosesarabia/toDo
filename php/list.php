@@ -8,7 +8,7 @@ include("connection.php");
 $conn = ConnectionBD();
 
 
-$envio = array();
+$send = array();
 $n;
 $info;
 
@@ -40,7 +40,7 @@ if (!($row = mysqli_fetch_array($response, MYSQLI_ASSOC))) {
 					$name_responsible = $row['name_responsible'];					
 
 				$info = array("nameTask"=>$nameTask, "state" => $state,"name_responsible" => $name_responsible);
-    			array_push($envio, $info);
+    			array_push($send, $info);
 
 				}
 
@@ -50,7 +50,7 @@ mysqli_free_result($response);
 }
 mysqli_close($conn);
 
-$result["data"] = $envio;
+$result["data"] = $send;
 
 /* convert to json */
 $resultJson = json_encode($result);

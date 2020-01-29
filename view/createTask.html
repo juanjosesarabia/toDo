@@ -64,23 +64,20 @@
                     <div class="form-group row">
                       <label for="createSelectState" class="col-3 col-form-label">Select State:</label>
                       <div class="col-9">
-                      <select class="form-control" id="createSelectState" required>
-                        <option value="Open">Open</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                        <option value="Archived">Archived</option>
+                      <select class="form-control" id="createSelectState" disabled>
+                        <option value="Open">Open</option>                        
                       </select>
                      </div>
                     </div>
                     <div class="form-group row">
                       <label for="createResponsible" class="col-3 col-form-label">Name responsible:</label>
                       <div class="col-9">
-                        <input type="text" class="form-control"  placeholder="Responsible" id="createResponsible" required >
+                        <input type="text" class="form-control"  placeholder="Responsible" id="createResponsible" disabled value="Not assigned" >
                         </div>
                     </div>
 
                     <div class="d-flex justify-content-end">
-                      <input type="submit" class="btn text-white bg-info btn-md " value="Save task"> </input>
+                      <input type="submit" class="btn text-white bg-info btn-md " value="Save task" > </input>
                       
                     </div>
 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/c1abb17d55.js"></script>
 </head>
-<body >    
+<body onload="listTask()">    
     
     <div class="d-flex" id="wrapper">
 
@@ -59,14 +59,14 @@
                           <label for="" class="col-form-label">Search: </label>
                          </div>
                          <div class="col-7">
-                          <input class="form-control" type="text"  list="searchTask" placeholder="Select task">
+                          <input class="form-control" type="text"  list="searchTask" placeholder="Select task" id="searchTas" required>
                           <datalist id="searchTask" class="">
       
                           </datalist>
 
                          </div>
                          <div class="col-3">
-                          <a type="btn" class="btn btn-info btn-d btn-block text-white" onclick="">Select Taks</a>
+                          <a type="btn" class="btn btn-info btn-d btn-block text-white" onclick="searchT()" >Select Taks</a>
                          </div>
                         </form>
                        </div><br>
