@@ -12,7 +12,7 @@ $conn = ConnectionBD();
 $result = array();
 
 ///
-$query = 'SELECT nameTask FROM task';
+$query = 'SELECT name_Responsible FROM responsible';
 $answer = mysqli_query($conn, $query) or die('Failed query:: ' . mysqli_error());
 
 if (!($row = mysqli_fetch_array($answer, MYSQLI_ASSOC))) {
@@ -24,28 +24,27 @@ if (!($row = mysqli_fetch_array($answer, MYSQLI_ASSOC))) {
 	$result["validation"] = "ok";
 	$result["n"] = $n;
 
-	if (isset($_SESSION['name'])){
-	$result["sesion"] = $_SESSION["name"];
+	
 }
 
 
   mysqli_data_seek($answer, 0);// verify data load
 	while( $row = mysqli_fetch_array($answer)){
-					$nameTask = $row['nameTask'];
+					$nameResponsible = $row['name_Responsible'];
 
-				$info = array("nameTask" => $nameTask);
+				$info = array("nameResponsible" => $nameResponsible);
 				array_push($send, $info);
 				}
 
-
+            
 
 
 mysqli_free_result($answer);
-}
+
 mysqli_close($conn);
 
 $result["data"] = $send;
-/* convert to json */
+/*  convert to json */ 
 $resultJson = json_encode($result);
 
 echo '' . $resultJson . '';
