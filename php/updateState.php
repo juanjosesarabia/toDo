@@ -6,8 +6,8 @@ include("connection.php");
 
 $conn = ConnectionBD();
 
-$task = $_POST['task'];
-$state = $_POST['state'];
+$task = $_GET['task'];
+$state = $_GET['state'];
 
 
 

@@ -224,10 +224,10 @@ function searchT(){ // search Task information
         var state = $("#editTaskSelectState").val();
          
         
-        $.post(localStorage["host"] + "php/updateState.php", {task: task, state: state},null)
+
+        $.getJSON(localStorage["host"] + "php/updateState.php", {task: task, state: state},null, 'json')
           .done(function (responseServer) {
-              alert(responseServer);
-           
+
                 if (responseServer.validation == "ok") {
                   alert(responseServer.message);
                  
@@ -378,12 +378,15 @@ function searchTaskEdit(){  //Validate data de edit task
                     let   data = responseServer.task;
                     let   nameT = document.getElementById("editNameT");
                           name1 = data[0].nameTask;
+                          console.log(name1);
                           nameT.value =data[0].nameTask;
                     let   state = document.getElementById("editSelectState"); 
                           state1 =data[0].state;
+                          console.log(state1);
                           state.value =data[0].state;
 
                           responsible1=data[0].name_responsible;
+                          console.log( responsible1);
                     $.getJSON(localStorage["host"] + "php/listResponsible.php")//validate select of responsible
                           .done(function (responseServer) {
                                       var nameT;
@@ -401,14 +404,17 @@ function searchTaskEdit(){  //Validate data de edit task
                                           x.appendChild(t);
                                           document.getElementById("editResponsible").appendChild(x);
                 }//
+
+
+                let   resp = document.getElementById("editResponsible");
+                  resp.value=data[0].name_responsible;
+
                       }else{
                         alert(responseServer.message);
                       }
                      });
           
-            let   resp = document.getElementById("editResponsible");
-                  resp.value=data[0].name_responsible;
-
+            
                   document.getElementById("editNameT").removeAttribute("disabled");
                   document.getElementById("editSelectState").removeAttribute("disabled");
                   document.getElementById("editResponsible").removeAttribute("disabled");
@@ -424,8 +430,8 @@ function searchTaskEdit(){  //Validate data de edit task
 
        $('#editTask').submit(function () {
  
-              var NameT= $("#editNameT").text();
-              var state = $("#editSelectState").text();
+              var NameT= $("#editNameT").val();
+              var state = $("#editSelectState").val();
               var responsible = $("#editResponsible").val();
               
                 $.post(localStorage["host"] + "php/editData.php", {name1:name1, name2: NameT,state1:state1, state2: state, responsible1: responsible1, responsible2: responsible},null, "json")
