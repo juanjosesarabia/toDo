@@ -30,7 +30,7 @@ if (!($row = mysqli_fetch_array($result2, MYSQLI_ASSOC))) {
 
 
 
-echo $idResponsible;
+
 $query = 'UPDATE task SET `id_responsible`= "'.$idResponsible.'" WHERE `nameTask` ="'.$name .'"';
 
 $result1 = mysqli_query($conn, $query) or die('Failed query:: ' . mysqli_error());

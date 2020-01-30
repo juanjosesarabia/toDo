@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/c1abb17d55.js"></script>
 </head>
-<body onload="listTask()" >    
+<body >    
     
     <div class="d-flex" id="wrapper">
 
@@ -39,7 +39,7 @@
 			  </button>	
 			      <div class="submenu" style="display: none;">
                 <a href="listUser.html">List users</a>
-                <a href="createResponsible.html">Create Responsible</a>				            
+                <a href="createResponsible.html">Create Responsible</a>				             
 			      </div>
             <a href="../index.html" class=" list-group-item  bg-info  text-white" id="btn-logOut" >Log out</a>
             
@@ -51,65 +51,31 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">         
               <div class="section-task mt-2">
-                  <h4 class=" text-white bg-info" id="task-title">Assign Task</h2>
+                  <h4 class=" text-white bg-info" id="task-title">Create User Responsible</h2>
                                         
-                  <div class=" pt-3"><!-- Assign Task -->
-                     <form class="form-group px-5" id="searchT"><!-- form search Task -->
-                       <div class="form-group row">
-                         <div class="col-2">
-                          <label for="" class="col-form-label">Search: </label>
-                         </div>
-                         <div class="col-7">
-                          <input class="form-control" type="text"  list="searchTask" id="searchTaskAssing" placeholder="Select task to assign responsible">
-                          <datalist id="searchTask" class="">
-      
-                          </datalist>
-
-                         </div>
-                         <div class="col-3">
-                          <a type="btn" class="btn btn-info btn-d btn-block text-white" onclick="searchTaskAssign()">Select Taks</a>
-                         </div>
-                        </form>
-                       </div><br>
-                      
-              <div id="page-content-wrapper ">         
-                <div class="section-task mt-2 mx-2">
-                  <h4 class=" text-white bg-info" id="task-title">Data Task</h2>
-                      <br>
-                   <form id="assignTask" class="form-group px-5"> <!-- form assignTask -->
+                  <div class=" pt-3"><!-- create User Responsible -->
+                   <form id="createUserR" class="form-group px-5">
                     <div class="form-group  row">
-                      <label for="assignNameT" class="col-3 col-form-label">Name task:</label>
+                      <label for="createNameT" class="col-3 col-form-label">Name User Responsible:</label>
                       <div class="col-9">
-                      <p  class="form-control"  placeholder="Name task" id="assignNameT" >Data Name task </p>
+                      <input type="text" class="form-control"  placeholder="Name User Responsible:" id="createUser" required autofocus>
                       </div>
                     </div>
 
-                    <div class="form-group row">
-                      <label for="assignSelectState" class="col-3 col-form-label">Select State:</label>
-                      <div class="col-9">
-                      <p class="form-control" id="assignSelectState" > Data State</p>
-                        
-                     </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="assignResponsible" class="col-3 col-form-label">Name responsible:</label>
-                      <div class="col-9">
-                        <select type="text" class="form-control"  placeholder="Responsible" id="assignResponsible" required disabled></select>
-                        </div>
-                    </div>
+                    
+                    
 
                     <div class="d-flex justify-content-end">
-                      <input type="submit" class="btn text-white bg-info btn-md " value="Assign task" id="assignTaskResponsible" disabled> </input>
+                      <input type="submit" class="btn text-white bg-info btn-md " value="Create Responsible" > </input>
                       
                     </div>
 
 
                    </form>
                    
-                    </div>
-                  </div>     
-                </div>
-            </div>         
+
+                  </div>
+              </div>         
         </div>
        
     
